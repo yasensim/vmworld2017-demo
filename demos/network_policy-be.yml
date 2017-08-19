@@ -6,7 +6,7 @@ metadata:
 spec:
   podSelector:
     matchLabels:
-      app: redis
+      tier: backend
   ingress:
     - ports:
         - protocol: TCP
@@ -14,4 +14,4 @@ spec:
       from:
         - podSelector:
             matchLabels:
-              app: django
+              app: nsx-redis

@@ -4,13 +4,13 @@ kind: Service
 metadata:
   name: frontend
   labels:
-    app: django
+    app: nsx-redis
     tier: frontend
 spec:
   ports:
   - port: 80
   selector:
-    app: django
+    app: nsx-redis
     tier: frontend
 ---
 apiVersion: extensions/v1beta1
@@ -22,7 +22,7 @@ spec:
   template:
     metadata:
       labels:
-        app: django
+        app: nsx-redis
         tier: frontend
     spec:
       containers:

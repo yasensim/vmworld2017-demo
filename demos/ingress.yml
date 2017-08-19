@@ -4,7 +4,7 @@ metadata:
   name: nsx-demo-ingress
   namespace: vmworld
   labels:
-    app: django
+    app: nsx-redis
     tier: frontend
 spec:
   rules:
