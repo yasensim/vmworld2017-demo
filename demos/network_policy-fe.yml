@@ -1,0 +1,13 @@
+kind: NetworkPolicy
+apiVersion: extensions/v1beta1
+metadata:
+  name: allow-fe-communication
+  namespace: vmworld
+spec:
+  podSelector:
+    matchLabels:
+      app: django
+  ingress:
+    - ports:
+        - protocol: TCP
+          port: 80
